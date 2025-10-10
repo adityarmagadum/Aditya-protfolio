@@ -86,7 +86,7 @@ const Hero = () => {
             textShadow: '0 0 80px rgba(34, 211, 238, 0.5)'
           }}
         >
-          Aditya Magadum
+          Aditya Raosab Magadum
         </motion.h1>
 
         <motion.div

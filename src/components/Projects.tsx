@@ -4,52 +4,55 @@ import { ExternalLink, Github, Sparkles } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: 'AI-Powered Analytics Platform',
-      description: 'Real-time data analysis using machine learning algorithms for predictive insights',
-      tech: ['Python', 'TensorFlow', 'React', 'AWS'],
+      title: 'A Secure IoT-Based Medicine Management System for Educational Institutes',
+      description:
+        'Designed and implemented a secure and automated medicine dispensing system for educational institutions. Integrated barcode scanning, password authentication, and Excel-based transaction logging using Raspberry Pi and Python.',
+      tech: ['Python', 'IoT', 'Excel', 'Raspberry Pi'],
       gradient: 'from-cyan-400 to-blue-500',
-      github: '#',
-      demo: '#'
+  github: 'https://github.com/adityarmagadum/A-Secure-IoT-Based-Medicine-Management-System-for-Educational-Institutes',
+      demo: '#',
+      period: 'Oct 2024 – Dec 2024'
     },
     {
-      title: 'Smart IoT Home System',
-      description: 'Integrated IoT solution for home automation with voice control and AI optimization',
-      tech: ['Java', 'MQTT', 'Raspberry Pi', 'Node.js'],
+      title: 'Java Console-Based Car Rental System',
+      description:
+        'Developed an object-oriented Car Rental System in Java with modules for Car, Customer, and Rental management. Implemented features for car registration, renting, and returning using Java collections and an interactive console interface.',
+      tech: ['Java', 'OOP'],
       gradient: 'from-blue-400 to-purple-500',
       github: '#',
-      demo: '#'
-    },
+      demo: '#',
+      period: 'Jun 2024 – Jul 2024'
+    }
+    ,
     {
-      title: 'Cloud-Native Microservices',
-      description: 'Scalable microservices architecture deployed on Kubernetes with CI/CD pipeline',
-      tech: ['Docker', 'Kubernetes', 'Go', 'AWS'],
-      gradient: 'from-purple-400 to-pink-500',
-      github: '#',
-      demo: '#'
-    },
-    {
-      title: 'Neural Network Visualizer',
-      description: 'Interactive tool for visualizing and understanding deep learning architectures',
-      tech: ['Python', 'PyTorch', 'D3.js', 'FastAPI'],
-      gradient: 'from-cyan-400 to-teal-500',
-      github: '#',
-      demo: '#'
-    },
-    {
-      title: 'Blockchain Supply Chain',
-      description: 'Decentralized supply chain management system with smart contracts',
-      tech: ['Solidity', 'Ethereum', 'Web3.js', 'React'],
-      gradient: 'from-green-400 to-cyan-500',
-      github: '#',
-      demo: '#'
-    },
-    {
-      title: 'NLP Chatbot Framework',
-      description: 'Conversational AI framework with sentiment analysis and intent recognition',
-      tech: ['Python', 'BERT', 'Flask', 'MongoDB'],
+      title: 'Sales Dashboard in Power BI',
+      description:
+        'Built an interactive sales dashboard using Power BI to visualize KPIs, trends and segment performance. Implemented data modeling and DAX measures to support dynamic filtering and drill-down analysis.',
+      tech: ['Power BI', 'DAX', 'Data Modeling'],
       gradient: 'from-yellow-400 to-orange-500',
       github: '#',
-      demo: '#'
+      demo: '#',
+      period: 'May 2025 – June 2025'
+    },
+    {
+      title: 'Symptom-Based Health Navigation System using ML',
+      description:
+        'Built a model using Support Vector Machine (SVM) to predict diseases based on symptoms. Applied text preprocessing and classification techniques to improve early diagnosis support for users.',
+      tech: ['ML', 'SVM'],
+      gradient: 'from-cyan-400 to-teal-500',
+      github: '#',
+      demo: '#',
+      period: 'Jan 2025 – Feb 2025'
+    },
+    {
+      title: 'Crop Recommendation System',
+      description:
+        'Processed IoT sensor data (temperature, humidity, soil) for crop prediction. Applied machine learning algorithms to recommend suitable crops and demonstrated integration of AI in agriculture technology.',
+      tech: ['IoT', 'ML'],
+      gradient: 'from-green-400 to-cyan-500',
+      github: '#',
+      demo: '#',
+      period: 'Jun 2024 – Jul 2024'
     }
   ];
 

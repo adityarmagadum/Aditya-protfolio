@@ -3,6 +3,8 @@ import { motion, useScroll, useSpring } from 'framer-motion';
 import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
+import Achievements from './components/Achievements';
+import Certifications from './components/Certifications';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Navigation from './components/Navigation';
@@ -45,10 +47,12 @@ function App() {
       <Navigation />
 
       <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Experience />
+    <Hero />
+    <About />
+    <Experience />
+    <Projects />
+    <Certifications />
+    <Achievements />
         <Contact />
       </main>
 

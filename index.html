@@ -2,9 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="Aditya Raosab Magadum Futuristic AI Portfolio" />
+    <meta keywords="Aditya Raosab Magadum, Aditya Magadum, Aditya, Nagarjuna college, Portfolio, AI, Futuristic, Developer, Projects, Skills, Contact" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aditya Raosab Magadum Futuristic AI Portfolio</title>
+    <!-- EmailJS SDK (optional): replace YOUR_EMAILJS_PUBLIC_KEY with your real public key -->
+    <!-- To enable direct send from the UI without redirect, sign up at https://www.emailjs.com/ -->
+    <!-- Then replace the PUBLIC_KEY below. You can also remove these two script tags and use the npm package if you prefer. -->
+    <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+    <script>
+      try {
+        if (window && window.emailjs) {
+          window.emailjs.init('YOUR_EMAILJS_PUBLIC_KEY');
+        }
+      } catch (e) {
+        // ignore initialization errors; Contact component will check availability
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

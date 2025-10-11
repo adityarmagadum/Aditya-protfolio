@@ -1,14 +1,16 @@
 import { motion } from 'framer-motion';
-import { Brain, Cloud, Code, Cpu, Database, Zap } from 'lucide-react';
+import { Brain, Cloud, Code, Cpu, Zap, Globe, BarChart2 } from 'lucide-react';
 
 const About = () => {
   const techStack = [
     { name: 'Python', icon: Code, color: 'from-cyan-400 to-blue-500' },
     { name: 'Java', icon: Cpu, color: 'from-blue-400 to-purple-500' },
     { name: 'Machine Learning', icon: Brain, color: 'from-purple-400 to-pink-500' },
+    { name: 'AI', icon: Brain, color: 'from-purple-400 to-pink-500' },
     { name: 'Cloud Computing', icon: Cloud, color: 'from-cyan-400 to-teal-500' },
     { name: 'IoT', icon: Zap, color: 'from-yellow-400 to-orange-500' },
-    { name: 'Databases', icon: Database, color: 'from-green-400 to-cyan-500' }
+    { name: 'Web Development', icon: Globe, color: 'from-green-400 to-cyan-500' },
+    { name: 'Power BI', icon: BarChart2, color: 'from-yellow-400 to-orange-500' }
   ];
 
   const containerVariants = {
@@ -47,28 +49,33 @@ const About = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <motion.div
+            <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="relative group"
-          >
+            >
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500" />
             <div className="relative bg-gray-900/80 backdrop-blur-xl p-8 rounded-2xl border border-cyan-500/30">
               <div className="w-40 h-40 mx-auto mb-6 relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full animate-spin-slow" />
-                <div className="absolute inset-2 bg-gray-900 rounded-full flex items-center justify-center">
-                  <div className="w-32 h-32 bg-gradient-to-br from-cyan-400/20 to-purple-500/20 rounded-full flex items-center justify-center">
-                    <Brain className="w-16 h-16 text-cyan-400" />
-                  </div>
-                </div>
+              {/* decorative gradient ring behind the image */}
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full blur-xl opacity-40 group-hover:opacity-75 transition-opacity duration-500" />
+              {/* image container with small inset to create a ring effect */}
+              <div className="absolute inset-2 bg-gray-900 rounded-full flex items-center justify-center overflow-hidden">
+                {/* Replace the src with your image path or URL */}
+                <img
+                src="/path/to/your-image.jpg"
+                alt="Your Name"
+                className="w-32 h-32 rounded-full object-cover"
+                />
+              </div>
               </div>
               <h3 className="text-2xl font-bold text-center mb-4 text-transparent bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text">
-                AI Developer & Innovator
+              AI Developer & Innovator
               </h3>
             </div>
-          </motion.div>
+            </motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -99,18 +106,19 @@ const About = () => {
           <h3 className="text-3xl font-bold text-center mb-12 text-cyan-400">
             Tech Stack
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {techStack.map((tech, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-center items-stretch">
+            {techStack.map((tech) => (
               <motion.div
                 key={tech.name}
                 variants={itemVariants}
-                whileHover={{ scale: 1.1, y: -5 }}
+                whileHover={{ scale: 1.03, y: -3 }}
                 className="group relative"
               >
                 <div className={`absolute inset-0 bg-gradient-to-r ${tech.color} rounded-xl blur-lg opacity-0 group-hover:opacity-75 transition-opacity duration-300`} />
-                <div className="relative bg-gray-900/80 backdrop-blur-xl p-6 rounded-xl border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300">
-                  <tech.icon className="w-10 h-10 mx-auto mb-3 text-cyan-400 group-hover:text-white transition-colors" />
-                  <p className="text-center text-sm font-semibold text-gray-300 group-hover:text-white transition-colors">
+
+                <div className="relative bg-gray-900/80 backdrop-blur-xl p-6 rounded-xl border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300 flex flex-col items-center justify-center h-36 w-full">
+                  <tech.icon className="w-10 h-10 mb-2 text-cyan-400 group-hover:text-white transition-colors" />
+                  <p className="text-base font-semibold text-gray-300 group-hover:text-white transition-colors">
                     {tech.name}
                   </p>
                 </div>

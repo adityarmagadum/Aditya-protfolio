@@ -18,25 +18,24 @@ const Hero = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.8, ease: 'easeOut' }
+      transition: { duration: 0.8 }
     }
   };
 
   const glowVariants = {
     initial: { scale: 1, opacity: 0.5 },
-    animate: {
+      animate: {
       scale: [1, 1.2, 1],
       opacity: [0.5, 0.8, 0.5],
       transition: {
         duration: 3,
-        repeat: Infinity,
-        ease: 'easeInOut'
+        repeat: Infinity
       }
     }
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden ">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent" />
 
       <div className="absolute inset-0 opacity-30">
@@ -81,7 +80,7 @@ const Hero = () => {
 
         <motion.h1
           variants={itemVariants}
-          className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent"
+          className=" p-4 text-6xl md:text-8xl font-bold mb-8 mt-8 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent"
           style={{
             textShadow: '0 0 80px rgba(34, 211, 238, 0.5)'
           }}
@@ -89,16 +88,23 @@ const Hero = () => {
           Aditya Raosab Magadum
         </motion.h1>
 
+        <motion.h2
+          variants={itemVariants}
+          className="text-2xl md:text-3xl font-light text-gray-300 mb-6"
+        >
+         
+        </motion.h2>
+
         <motion.div
           variants={itemVariants}
-          className="relative inline-block mb-8"
+          className="relative inline-block mt-6 mb-8"
         >
-          <h2 className="text-2xl md:text-4xl font-light text-gray-300">
-            <span className="text-cyan-400">AI Developer</span>
+          <h2 className="text-2xl md:text-3xl font-light text-gray-300">
+            <span className="text-cyan-400">AI-Driven Full Stack Developer</span>
             {' | '}
-            <span className="text-blue-400">Innovator</span>
+            <span className="text-blue-400">Prompt Engineer</span>
             {' | '}
-            <span className="text-purple-400">Future Technologist</span>
+            <span className="text-purple-400">Tech Innovator</span>
           </h2>
           <div className="absolute -bottom-2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent" />
         </motion.div>
@@ -108,7 +114,7 @@ const Hero = () => {
           className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12"
         >
           Crafting intelligent solutions at the intersection of artificial intelligence,
-          machine learning, and cloud computing
+          machine learning, and web development.
         </motion.p>
 
         <motion.div
@@ -116,12 +122,14 @@ const Hero = () => {
           className="flex flex-wrap justify-center gap-4"
         >
           <motion.a
-            href="#contact"
+            href="https://drive.google.com/file/d/1BEtgD6X5GVh1YJLmXuu1uLJ2JzbK34KH/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-semibold overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="relative z-10">Get In Touch</span>
+            <span className="relative z-10">Resume</span>
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500"
               initial={{ x: '100%' }}

@@ -5,44 +5,40 @@ const Experience = () => {
   const experiences = [
     {
       icon: Briefcase,
+      title: 'Intern',
+      organization: 'CSIR - National Aerospace Laboratories (NAL)',
+      period: 'Jan 2025 - Feb 2025 · 2 mos · Hybrid',
+      description:
+        'During my internship at CSIR-NAL, Bengaluru, I worked on machine learning-based fault detection using bearing datasets (IMS, CWRU, XJTU-SY). Researched traditional ML methods like SVM and Random Forest, and deep learning models such as CNNs and LSTMs for fault classification. Explored challenges in predictive maintenance including data imbalance, noise reduction, and model generalization. Gained hands-on experience in feature extraction, data preprocessing, and model training to develop efficient fault detection systems.',
+      color: 'green'
+    },
+    {
+      icon: Briefcase,
+      title: 'Intern',
+      organization: 'Indo Skill · NCET',
+      period: 'Oct 2023 - Nov 2023 · 2 mos · Hybrid',
+      description:
+        'At Indo Skill, NCET, I developed and deployed AI and Data Science applications for real-time projects. Focused on data collection, preprocessing, and feature engineering to improve model accuracy. Designed and optimized ML models for efficient training and evaluation, and worked on data visualization and analytics to extract meaningful insights for decision-making.',
+      color: 'pink'
+    },
+    {
+      icon: Briefcase,
+      title: 'Intern',
+      organization: 'TECHNICAL HUB · NCET',
+      period: 'Dec 2022 - Feb 2023 · 3 mos · On-site',
+      description:
+        'At Technical Hub, NCET, I strengthened my Python programming skills through hands-on development and deployment of real-world applications. Learned Python fundamentals, OOP, debugging, and built scalable and maintainable applications.',
+      color: 'amber'
+    },
+    {
+      icon: Briefcase,
       title: 'AI Research Intern',
       organization: 'Tech Innovation Labs',
       period: '2024 - Present',
       description: 'Developing cutting-edge machine learning models for computer vision applications',
       color: 'cyan'
     },
-    {
-      icon: Award,
-      title: 'AWS Certified Solutions Architect',
-      organization: 'Amazon Web Services',
-      period: '2024',
-      description: 'Professional certification in cloud architecture and deployment',
-      color: 'blue'
-    },
-    {
-      icon: Trophy,
-      title: 'National Hackathon Winner',
-      organization: 'TechFest 2024',
-      period: '2024',
-      description: 'First place for innovative IoT-based smart city solution',
-      color: 'purple'
-    },
-    {
-      icon: GraduationCap,
-      title: 'Machine Learning Specialization',
-      organization: 'Stanford Online',
-      period: '2023',
-      description: 'Completed advanced coursework in deep learning and neural networks',
-      color: 'teal'
-    },
-    {
-      icon: Zap,
-      title: 'Software Development Intern',
-      organization: 'StartupXYZ',
-      period: '2023',
-      description: 'Built scalable microservices and deployed cloud infrastructure',
-      color: 'pink'
-    }
+    
   ];
 
   const colorMap: { [key: string]: string } = {
@@ -51,6 +47,9 @@ const Experience = () => {
     purple: 'from-purple-400 to-purple-600',
     teal: 'from-teal-400 to-teal-600',
     pink: 'from-pink-400 to-pink-600'
+    ,
+    green: 'from-green-400 to-green-600',
+    amber: 'from-amber-400 to-amber-600'
   };
 
   const glowMap: { [key: string]: string } = {
@@ -59,6 +58,9 @@ const Experience = () => {
     purple: 'bg-purple-400',
     teal: 'bg-teal-400',
     pink: 'bg-pink-400'
+    ,
+    green: 'bg-green-400',
+    amber: 'bg-amber-400'
   };
 
   return (
@@ -74,7 +76,7 @@ const Experience = () => {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-            Experience & Achievements
+            Experience
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full" />
         </motion.div>

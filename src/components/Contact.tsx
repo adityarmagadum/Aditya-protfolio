@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Mail, Github, Linkedin, Twitter } from 'lucide-react';
+import { Send, Mail, Github, Linkedin, Instagram } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,12 +14,27 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    try {
+      const API_BASE = (import.meta.env.VITE_API_URL as string) || 'http://localhost:4000';
+      const resp = await fetch(`${API_BASE}/api/send`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: formData.name, email: formData.email, message: formData.message })
+      });
 
-    setTimeout(() => {
+      if (!resp.ok) {
+        const json = await resp.json().catch(() => ({}));
+        throw new Error((json && json.error) || 'Failed to send message');
+      }
+
       setIsSubmitting(false);
       setFormData({ name: '', email: '', message: '' });
       alert('Message sent successfully!');
-    }, 2000);
+    } catch (err) {
+      console.error('Send error', err);
+      setIsSubmitting(false);
+      alert('Failed to send message from server. Please try again later.');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -30,10 +45,10 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { icon: Github, url: 'https://github.com', color: 'hover:text-cyan-400' },
-    { icon: Linkedin, url: 'https://linkedin.com', color: 'hover:text-blue-400' },
-    { icon: Twitter, url: 'https://twitter.com', color: 'hover:text-purple-400' },
-    { icon: Mail, url: 'mailto:aditya@example.com', color: 'hover:text-pink-400' }
+    { icon: Github, url: 'https://github.com/adityarmagadum', color: 'hover:text-cyan-400' },
+    { icon: Linkedin, url: 'https://www.linkedin.com/in/aditya-raosab-magadum-683036232/', color: 'hover:text-blue-400' },
+    { icon: Instagram, url: 'https://www.instagram.com/mr_adi__7315/?igsh=YWJ3YXl6OTBwMnZ6#', color: 'hover:text-pink-400' },
+    { icon: Mail, url: 'mailto:adityarmagadum143@gmail.com', color: 'hover:text-pink-400' }
   ];
 
   return (

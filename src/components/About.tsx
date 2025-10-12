@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Brain, Cloud, Code, Cpu, Zap, Globe, BarChart2 } from 'lucide-react';
+import AdityaImg from '../../aditya.png';
 
 const About = () => {
   const techStack = [
@@ -49,33 +50,24 @@ const About = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative group"
-            >
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500" />
-            <div className="relative bg-gray-900/80 backdrop-blur-xl p-8 rounded-2xl border border-cyan-500/30">
-              <div className="w-40 h-40 mx-auto mb-6 relative">
-              {/* decorative gradient ring behind the image */}
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full blur-xl opacity-40 group-hover:opacity-75 transition-opacity duration-500" />
-              {/* image container with small inset to create a ring effect */}
-              <div className="absolute inset-2 bg-gray-900 rounded-full flex items-center justify-center overflow-hidden">
-                {/* Replace the src with your image path or URL */}
+            className="flex items-center justify-center"
+          >
+            {/* Clean, larger avatar with no decorative box or ring */}
+            <div className="mx-auto mb-6 flex items-center justify-center">
+              <div className="w-80 h-80 md:w-96 md:h-auto bg-transparent rounded-2xl shadow-2xl flex items-center justify-center">
                 <img
-                src="/path/to/your-image.jpg"
-                alt="Your Name"
-                className="w-32 h-32 rounded-full object-cover"
+                  src={AdityaImg}
+                  alt="Aditya Raosab Magadum"
+                  className="max-w-full max-h-full object-contain"
                 />
               </div>
-              </div>
-              <h3 className="text-2xl font-bold text-center mb-4 text-transparent bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text">
-              AI Developer & Innovator
-              </h3>
             </div>
-            </motion.div>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -84,14 +76,16 @@ const About = () => {
             transition={{ duration: 0.6 }}
           >
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              Passionate about pushing the boundaries of technology, I specialize in developing
-              intelligent systems that solve real-world problems. With expertise in AI, machine
-              learning, and cloud computing, I transform innovative ideas into scalable solutions.
+              A passionate Full Stack Web Developer focused on creating responsive, data-driven,
+              and user-friendly applications. Skilled in leveraging AI tools and automation to
+              enhance efficiency, creativity, and development speed while maintaining clean and
+              scalable design.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              My journey in technology is driven by curiosity and a commitment to continuous
-              learning. I thrive on challenges that require creative problem-solving and
-              cutting-edge technical implementation.
+              Experienced in AI, Data Science, and IoT-based projects, with a strong interest in
+              building innovative solutions that solve real-world challenges. Recently developed
+              a secure medicine management system, highlighting the ability to blend technology
+              and innovation effectively.
             </p>
           </motion.div>
         </div>

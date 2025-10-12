@@ -30,14 +30,14 @@ const Experience = () => {
         'At Technical Hub, NCET, I strengthened my Python programming skills through hands-on development and deployment of real-world applications. Learned Python fundamentals, OOP, debugging, and built scalable and maintainable applications.',
       color: 'amber'
     },
-    {
-      icon: Briefcase,
-      title: 'AI Research Intern',
-      organization: 'Tech Innovation Labs',
-      period: '2024 - Present',
-      description: 'Developing cutting-edge machine learning models for computer vision applications',
-      color: 'cyan'
-    },
+    // {
+    //   icon: Briefcase,
+    //   title: 'AI Research Intern',
+    //   organization: 'Tech Innovation Labs',
+    //   period: '2024 - Present',
+    //   description: 'Developing cutting-edge machine learning models for computer vision applications',
+    //   color: 'cyan'
+    // },
     
   ];
 

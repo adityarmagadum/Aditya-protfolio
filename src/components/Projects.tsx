@@ -19,21 +19,21 @@ const Projects = () => {
         'Developed an object-oriented Car Rental System in Java with modules for Car, Customer, and Rental management. Implemented features for car registration, renting, and returning using Java collections and an interactive console interface.',
       tech: ['Java', 'OOP'],
       gradient: 'from-blue-400 to-purple-500',
-      github: '#',
+      github: 'https://github.com/adityarmagadum/car-rental-system',
       demo: '#',
       period: 'Jun 2024 – Jul 2024'
     }
     ,
-    {
-      title: 'Sales Dashboard in Power BI',
-      description:
-        'Built an interactive sales dashboard using Power BI to visualize KPIs, trends and segment performance. Implemented data modeling and DAX measures to support dynamic filtering and drill-down analysis.',
-      tech: ['Power BI', 'DAX', 'Data Modeling'],
-      gradient: 'from-yellow-400 to-orange-500',
-      github: '#',
-      demo: '#',
-      period: 'May 2025 – June 2025'
-    },
+    // {
+    //   title: 'Sales Dashboard in Power BI',
+    //   description:
+    //     'Built an interactive sales dashboard using Power BI to visualize KPIs, trends and segment performance. Implemented data modeling and DAX measures to support dynamic filtering and drill-down analysis.',
+    //   tech: ['Power BI', 'DAX', 'Data Modeling'],
+    //   gradient: 'from-yellow-400 to-orange-500',
+    //   github: '#',
+    //   demo: '#',
+    //   period: 'May 2025 – June 2025'
+    // },
     {
       title: 'Symptom-Based Health Navigation System using ML',
       description:
@@ -44,16 +44,7 @@ const Projects = () => {
       demo: '#',
       period: 'Jan 2025 – Feb 2025'
     },
-    {
-      title: 'Crop Recommendation System',
-      description:
-        'Processed IoT sensor data (temperature, humidity, soil) for crop prediction. Applied machine learning algorithms to recommend suitable crops and demonstrated integration of AI in agriculture technology.',
-      tech: ['IoT', 'ML'],
-      gradient: 'from-green-400 to-cyan-500',
-      github: '#',
-      demo: '#',
-      period: 'Jun 2024 – Jul 2024'
-    }
+    
   ];
 
   const containerVariants = {
